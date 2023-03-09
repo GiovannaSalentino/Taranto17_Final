@@ -1,6 +1,56 @@
 <p-menubar [model]="items">
+    <ng-template pTemplate="start" >
+      <img src="\assets\png\TARANTO17_Colore_HiRes.png" height="15%" width="15%" alt="brando logo">
+    </ng-template>
+
   <div>
       <input type="text" pInputText placeholder="Search">
-      <button type="button" pButton label="Logout" icon="pi pi-power-off" style="margin-left:.25em"></button>
   </div>
 </p-menubar>
+
+<div style="display: inline-block; margin-top: 1.2%; margin-left: 1.2%; ">
+  <p-card header="Come nasce lo Scoutismo?" subheader="L'idea di B.P." [style]="{width: '360px'}" styleClass="p-card-shadow">
+    <ng-template pTemplate="header">
+        <img style="border-radius: 5px;" alt="Card" src="https://cdn2.tstatic.net/style/foto/bank/images/sosok-lord-baden-powell-pelopor-gerakan-kepanduan-bapak-pramuka-dunia.jpg">
+    </ng-template>
+    <p>Lo scoutismo nasce nel 1907 in Inghilterra quando Baden Powell pensò di organizzare, con un gruppo di venti ragazzi inglesi, il primo campo scout del mondo nell'isola di Brownsea, nella baia di Poole, sulla Manica.</p>
+    <p> Nel 1910 B.P. fondò ufficialmente l'Associazione delle Girl Guides ed il movimento parallelo del Guidismo. L'idea gli venne suggerita ad un raduno scout nel 1909, dove sette ragazze sfilarono inaspettatamente sotto i suoi occhi autodefinendosi Girl Scouts. </p>
+  </p-card>
+</div>
+
+<div style="display: inline-block; margin-top: 1.2%; margin-left: 1.2%;">
+  <p-card header="Cosa è l'AGESCI?" subheader="L'associazione" [style]="{width: '360px'}" styleClass="p-card-shadow">
+    <ng-template pTemplate="header">
+        <img style="height: 47%; width: 47%; margin-left: 24%; margin-top: 2.2%;" alt="Card" src="https://www.agesciroma84.org/public/wp/wp-content/uploads/2018/12/AGESCI.svg_.png">
+    </ng-template>
+    <p>L'Associazione Guide e Scouts Cattolici Italiani (AGESCI) nata nel 1974 dalla fusione di due preesistenti associazioni, è un'associazione giovanile educativa che si propone di contribuire alla formazione della persona nel tempo libero  e nelle attività extra-scolastiche secondo i principi ed il metodo dello scautismo.</p>
+    <p>Nella propria azione educativa l'associazione si propone di realizzare un impegno politico al di fuori dei legami o delle influenze partitiche.</p>
+  </p-card>
+</div>
+
+<div style="display: inline-block; margin-top: 2%; margin-left: 1.2%; ">
+  <p-card header="Le Branche" subheader="Le fasce di età" [style]="{width: '360px'}" styleClass="p-card-shadow">
+    <ng-template pTemplate="header">
+        <img style="height: 100%; width: 100%; margin-top: 18%; margin-bottom: 14%; " alt="Card" src="https://www.sanbernardinorealino.org/jo3/images/articoli/agesci_all.jpg">
+    </ng-template>
+    <p>La Branca è una fascia d'età in cui è suddiviso il metodo scout ed è caratterizzata da una propria ambientazione specifica.</p>
+    <p>-Branca Lupetti e Coccinelle (L/C), dagli 8 agli 11 anni, ambientazioni "Giungla" e "Bosco"</p>
+    <p>-Branca Esploratori e Guide (E/G), dagli 11 ai 16 anni, ambientazione "Avventura"</p>
+    <p>-Branca Rover e Scolte (R/S), dai 16 ai 21 anni, ambientazione "Strada" </p>
+  </p-card>
+</div>
+
+<div style="display: inline-block; margin-top: 2%; margin-left: 1.2%; margin-bottom: 5%;">
+    <p-card header="Taranto 17" subheader="Il nostro gruppo" [style]="{width: '360px'}" styleClass="p-card-shadow" >
+      <ng-template pTemplate="header">
+          <img style="border-radius: 5px; width: 100%; height: 95%;" alt="Card" src="\assets\jpeg\foto-gruppo-ta17.jpeg">
+      </ng-template>
+      <p>Il gruppo scout Taranto 17 nasce presso la parrocchia "Spirito Santo" sita nel quartiere Taranto 2 nell'autunno del 1988
+        con l'apertura del Clan "Signum Tau" e la Comunità Capi "Baden".</p>
+      <p>Successivamente nel 1991 vennero aperti il Reparto "Pegaso" e il Branco "Dhak".</p>
+      <p>Attualmente il gruppo è composto da più di cento soci, tra ragazzi e Capi.</p>
+    </p-card>
+</div>
+
+
+<router-outlet></router-outlet>

@@ -13,6 +13,11 @@ import {HttpClientModule} from '@angular/common/http';
 import {MatMenuModule} from '@angular/material/menu';
 import {MenubarModule} from 'primeng/menubar';
 import {MenuItem} from 'primeng/api';
+import {InputTextModule} from 'primeng/inputtext';
+import {ButtonModule} from 'primeng/button';
+import {CardModule} from 'primeng/card';
+import { BrancoComponent } from './branco/branco.component';
+
 
 
 
@@ -21,9 +26,13 @@ import {MenuItem} from 'primeng/api';
 @NgModule({
   declarations: [
     AppComponent,
-    HomepageComponent
+    HomepageComponent,
+    BrancoComponent
   ],
   imports: [
+    CardModule,
+    ButtonModule,
+    InputTextModule,
     MenubarModule,
     BrowserModule,
     AppRoutingModule,

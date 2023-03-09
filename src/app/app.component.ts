@@ -1,106 +1,129 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
+import { BrancoComponent } from './branco/branco.component';
 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'Taranto17';
 
   items = [
     {
-        label:'File',
-        icon:'pi pi-fw pi-file',
+        label:'Branco',
+        icon:'pi pi-fw pi-box',
         items:[
             {
-                label:'New',
-                icon:'pi pi-fw pi-plus',
-                items:[
-                {
-                    label:'Bookmark',
-                    icon:'pi pi-fw pi-bookmark'
-                },
-                {
-                    label:'Video',
-                    icon:'pi pi-fw pi-video'
-                },
-
-                ]
+                label:'Chi siamo',
+                command:()=>{this.vaiInBranco();},
+                icon:'pi pi-fw pi-id-card',
             },
             {
-                label:'Delete',
-                icon:'pi pi-fw pi-trash'
+              label:'info',
+              icon:'pi pi-fw pi-info-circle'
             },
             {
                 separator:true
             },
             {
-                label:'Export',
-                icon:'pi pi-fw pi-external-link'
+              label:'iscriviti',
+              icon:'pi pi-fw pi-user-plus'
             }
         ]
     },
     {
-        label:'Edit',
-        icon:'pi pi-fw pi-pencil',
+        label:'Reparto',
+        icon:'pi pi-fw pi-box',
         items:[
+          {
+             label:'Chi siamo',
+             icon:'pi pi-fw pi-id-card',
+           },
             {
-                label:'Left',
-                icon:'pi pi-fw pi-align-left'
-            },
-            {
-                label:'Right',
-                icon:'pi pi-fw pi-align-right'
-            },
-            {
-                label:'Center',
-                icon:'pi pi-fw pi-align-center'
-            },
-            {
-                label:'Justify',
-                icon:'pi pi-fw pi-align-justify'
-            },
-
-        ]
-    },
-    {
-        label:'Users',
-        icon:'pi pi-fw pi-user',
-        items:[
-            {
-                label:'New',
-                icon:'pi pi-fw pi-user-plus',
-
-            },
-            {
-                label:'Delete',
-                icon:'pi pi-fw pi-user-minus',
-
-            },
-            {
-                label:'Search',
+                label:'Squadriglie',
                 icon:'pi pi-fw pi-users',
-                items:[
+                items: [
                 {
-                    label:'Filter',
-                    icon:'pi pi-fw pi-filter',
-                    items:[
-                        {
-                            label:'Print',
-                            icon:'pi pi-fw pi-print'
-                        }
-                    ]
+                    label:'Sq. Leoni'
                 },
                 {
-                    icon:'pi pi-fw pi-bars',
-                    label:'List'
-                }
+                    label:'Sq. Falchi'
+                },
+                {
+                    label:'Sq. Lupi'
+                },
+                {
+                  label:'Sq. Gazzelle'
+                },
+                {
+                  label:'Sq. Rondini'
+                },
                 ]
-            }
+            },
+            {
+              label:'info',
+              icon:'pi pi-fw pi-info-circle'
+            },
+            {
+              label:'iscriviti',
+              icon:'pi pi-fw pi-user-plus'
+            },
         ]
     },
+    {
+        label:'Clan',
+        icon:'pi pi-fw pi-box',
+        items:[
+          {
+            label:'Chi siamo',
+            icon:'pi pi-fw pi-id-card',
+            items:[
+              {
+                label:'Noviziato'
+              },
+              {
+                label:'Clan'
+              }
+            ]
+          },
+          {
+            label:'info',
+            icon:'pi pi-fw pi-info-circle'
+          },
+          {
+            label:'iscriviti',
+            icon:'pi pi-fw pi-user-plus'
+          },
+        ]
+    },
+    {
+      label:'Comunità Capi',
+      icon:'pi pi-fw pi-box',
+      items:[
+        {
+          label:'Chi siamo',
+          icon:'pi pi-fw pi-id-card',
+        },
+        {
+          label:'Staff',
+          icon:'pi pi-fw pi-users',
+          items:[
+            {
+              label:'Staff L/C',
+            },
+            {
+              label:'Staff E/G',
+            },
+            {
+              label:'Staff R/S',
+            },
+          ]
+        }
+      ]
+    },
+
     {
         label:'Events',
         icon:'pi pi-fw pi-calendar',
@@ -133,8 +156,15 @@ export class AppComponent {
         ]
     },
     {
-        label:'Quit',
-        icon:'pi pi-fw pi-power-off'
+      label:'Shop',
+      icon:'pi pi-fw pi-shopping-bag',
     }
 ];
+vaiInBranco(){
+  this.router.navigate(["branco"]);
 }
+
+
+}
+
+
