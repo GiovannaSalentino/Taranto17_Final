@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { Router } from '@angular/router';
 import { BrancoComponent } from './branco/branco.component';
 
 
@@ -8,6 +9,7 @@ import { BrancoComponent } from './branco/branco.component';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  constructor(private router: Router) {}
   title = 'Taranto17';
 
   items = [
